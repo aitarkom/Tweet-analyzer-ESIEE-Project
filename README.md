@@ -37,4 +37,8 @@ However you cannot take too much tweets at once because twitter will not allow i
 
 We decided to put every tweet with a polarity higher than 0 as positive, equal 0 as neutral and under 0 as negative.
 If you take a closer look to each tweet's polarity, you may notice that sometimes its higher than 0 but you feel like the sentiment of the tweet is more negative than positive
-However we noticed that for a big amount of tweets taken, the overall sentiment become more precise. 
+However we noticed that for a big amount of tweets taken, the overall sentiment become more precise.
+
+#### Issues
+
+If we set the number of tweets above 10, it randomly occur an error with dash.
