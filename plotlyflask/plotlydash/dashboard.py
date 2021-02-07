@@ -4,7 +4,7 @@ from tweepy import OAuthHandler
 from tweepy import Cursor
 import re
 from textblob import TextBlob
-from wordcloud import WordCloud
+#from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 import twitter_credentials
@@ -48,13 +48,13 @@ class TweetAnalyzer():
     def getpolarity(self, tweets):
         return TextBlob(tweets).sentiment.polarity
 
-    def plotwordcloud(self,df):
-        words = " ".join([tweet for tweet in  df['cleaned_tweets']])
-        wordCloud = WordCloud(width = 500, height = 300, random_state= 21, max_font_size=119).generate(words)
+    # def plotwordcloud(self,df):
+    #     words = " ".join([tweet for tweet in  df['cleaned_tweets']])
+    #     wordCloud = WordCloud(width = 500, height = 300, random_state= 21, max_font_size=119).generate(words)
 
-        plt.imshow(wordCloud, interpolation = "bilinear")
-        plt.axis('off')
-        #plt.show()
+    #     plt.imshow(wordCloud, interpolation = "bilinear")
+    #     plt.axis('off')
+    #     #plt.show()
 
     def getanalysis(self, score):
         if score < 0 :
